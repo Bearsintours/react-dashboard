@@ -1,20 +1,19 @@
 import React from 'react';
-import Week from './Week';
 
 
 class Orders extends React.Component {    
     render() {
         return (
             <div>
-                <div className="meter">
-                    <Meter percent={this.props.orders} animate={true}/>
+                <div className="gauge">
+                    <Gauge percent={this.props.ratio} animate={true}/>
                 </div>
             </div>
         )
     }
 }
 
-const Meter = (props) => {
+const Gauge = (props) => {
     let {
       percent = 0,         // a number between 0 and 1, inclusive
       width = 100,         // the overall width
@@ -22,7 +21,7 @@ const Meter = (props) => {
       rounded = true,      // if true, use rounded corners
       color = "#0078bc",   // the fill color
       animate = false,     // if true, animate when the percent changes
-      label = null         // a label to describe the contents (for accessibility)
+      label = null         // a label to describe the contents 
     } = props;
   
     const r = rounded ? Math.ceil(height / 2) : 0;

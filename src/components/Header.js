@@ -5,13 +5,13 @@ import '../styles/components/Header.scss';
 const Header = () => (
     <div className="header">
         <ul>
-            <li>
+            <li className="nav__icon">
                 <div className="icon-bar"></div>
                 <div className="icon-bar"></div>
                 <div className="icon-bar"></div>
             </li>
-            <li>dashboard</li>
-            <li>search</li>
+            <li className="nav__title">dashboard</li>
+            <li className="nav__search">search</li>
         </ul>
     </div>
 )
