@@ -36,17 +36,11 @@ const SalesChart = (props) => {
 
 
 const RadialChart = (props) => {
-    const sold = [props.itemSales.hoodie, props.itemSales.hat, props.itemSales.bracelet];
     const data = [
-        {name: 'bracelet', sold: sold[0], fill: '#f4a742'},
-        {name: 'cap', sold: sold[1], fill: '#41dcf4'},
-        {name: 'hoodie', sold: sold[2], fill: '#f45241'},
+        {name: 'hoodie', sold: props.itemSales[0].hoodie, fill: '#f4a742'},
+        {name: 'cap', sold: props.itemSales[1].cap, fill: '#41dcf4'},
+        {name: 'bracelet', sold: props.itemSales[2].bracelet, fill: '#f45241'}
       ];
-    //   const data = [
-    //     {name: 'bracelet', sold: props.itemSales.hoodie, fill: '#f4a742'},
-    //     {name: 'cap', sold: props.itemSales, fill: '#41dcf4'},
-    //     {name: 'hoodie', sold: props.itemSales, fill: '#f45241'},
-    //   ];
       
     const style = {
         left: 250,

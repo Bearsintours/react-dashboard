@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
+import { store } from './reducers/reducerActivePage';
+import { dayPage } from './actions/changePage';
+import { weekPage } from './actions/changePage';
+import { monthPage } from './actions/changePage';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-class App extends React.Component {
-  render () {
-    return (
-      <div>
-        <AppRouter />
-      </div>
-    );
-  };
-};
+// store.dispatch(dayPage());
+// store.dispatch(weekPage());
+//store.dispatch(monthPage());
+console.log(store.getState());
 
+const app = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+)
 
-ReactDOM.render(<App />,document.getElementById('app'));
+ReactDOM.render(app, document.getElementById('app'));

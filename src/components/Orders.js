@@ -3,10 +3,11 @@ import React from 'react';
 
 class Orders extends React.Component {    
     render() {
+        const ratio = this.props.ordersCompleted / this.props.orders;
         return (
             <div>
                 <div className="gauge">
-                    <Gauge percent={this.props.ratio} animate={true}/>
+                    <Gauge percent={ratio} animate={true}/>
                 </div>
             </div>
         )

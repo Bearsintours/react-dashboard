@@ -1,46 +1,77 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { monthPage } from '../actions/changePage';
 import Orders from './Orders';
 import Sales from './Sales';
 import Items from './Items';
 import data from '../data';
 
-const orders = data.month.orders;
-const ordersCompleted = data.month.completed;
-const ratio = ordersCompleted / orders;
-const totalSales = data.month.total;
-const sales = data.month.breakdown;
-const itemSales = data.month.sales;
+const Month = (props) => {
+    props.dispatch(monthPage());
+    return (
+        <div className="component">
+            <Orders 
+                orders={props.orders}
+                ordersCompleted={props.ordersCompleted}
+            />
+            <Sales 
+                totalSales={props.totalSales}
+                sales={props.sales}
+                itemSales={props.itemSales}
+            />
+            <Items />
+        </div>
+    )
+}
 
-class Month extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            orders,
-            ordersCompleted,
-            ratio,
-            totalSales,
-            sales,
-            itemSales
-        }
-    }
-    render() {
-        return (
-            <div>
-                <Orders 
-                    orders={this.state.orders}
-                    ordersCompleted={this.state.oredersCompleted}
-                    ratio={this.state.ratio}
-                />
-                <Sales 
-                    totalSales={this.state.totalSales}
-                    sales={this.state.sales}
-                    itemSales={this.state.itemSales}
-                />
-                <Items />
-            </div>
-        )
+const mapStateToProps = (state) => {
+    return {
+        orders: state.orders,
+        ordersCompleted: state.completed,
+        totalSales: state.totalSales,
+        sales: state.sales,
+        itemSales: state.itemSales
     }
 }
     
+export default connect(mapStateToProps)(Month);
 
-export default Month;
+
+// const orders = data.month.orders;
+// const ordersCompleted = data.month.completed;
+// const ratio = ordersCompleted / orders;
+// const totalSales = data.month.total;
+// const sales = data.month.breakdown;
+// const itemSales = data.month.sales;
+
+// class Month extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             orders,
+//             ordersCompleted,
+//             totalSales,
+//             sales,
+//             itemSales
+//         }
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <Orders 
+//                     orders={this.state.orders}
+//                     ordersCompleted={this.state.ordersCompleted}
+//                 />
+//                 <Sales 
+//                     totalSales={this.state.totalSales}
+//                     sales={this.state.sales}
+//                     itemSales={this.state.itemSales}
+//                 />
+//                 <Items />
+//             </div>
+//         )
+//     }
+// }
+    
+
+// export default Month;
