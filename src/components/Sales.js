@@ -1,5 +1,6 @@
 import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, RadialBarChart, RadialBar, Legend } from 'recharts';
+import '../styles/components/Sales.scss';
 
 
 class Sales extends React.Component {
@@ -8,11 +9,19 @@ class Sales extends React.Component {
     }
     render() {
         return (
-            <div>
-                <h2>Total Sales</h2>
+            <div className="sales">
+                <h1>Total Sales</h1>
                 <p>${this.props.totalSales}</p>
-                <SalesChart sales={this.props.sales}/>
-                <RadialChart itemSales={this.props.itemSales}/>
+                <div className="sales__graphs">
+                    <div className="graph">
+                        <SalesChart sales={this.props.sales}/>
+                    </div>
+                    <div className="graph">
+                        <RadialChart itemSales={this.props.itemSales}/>
+                    </div>
+                </div>
+                <h1>Sales</h1>
+                <p>{this.props.orders}</p>        
             </div>
         )
     }
@@ -22,12 +31,12 @@ const SalesChart = (props) => {
     const data = props.sales;
     return (
         <div>
-            <AreaChart width={360} height={120} data={data}
-        margin={{ top: 10, right: 30, left: 30, bottom: 0 }}>
+            <AreaChart width={400} height={300} data={data}
+        margin={{ top: 10, right: 30, left: 30, bottom: 10 }}>
             <XAxis dataKey="name" />
-            <Area type="monotone" dataKey="hoodie" stroke="#f4a742" fillOpacity={.8} fill="#f4a742" />
+            <Area type="monotone" dataKey="hoodie" stroke="#f45241" fillOpacity={.8} fill="#f45241" />
             <Area type="monotone" dataKey="hat" stroke="#41dcf4" fillOpacity={.8} fill="#41dcf4" />
-            <Area type="monotone" dataKey="bracelet" stroke="#f45241" fillOpacity={.8} fill="#f45241" />
+            <Area type="monotone" dataKey="bracelet" stroke="#f4a742" fillOpacity={.8} fill="#f4a742" />
             </AreaChart>
         </div>
     )
@@ -37,17 +46,18 @@ const SalesChart = (props) => {
 
 const RadialChart = (props) => {
     const data = [
-        {name: 'hoodie', sold: props.itemSales[0].hoodie, fill: '#f4a742'},
-        {name: 'cap', sold: props.itemSales[1].cap, fill: '#41dcf4'},
-        {name: 'bracelet', sold: props.itemSales[2].bracelet, fill: '#f45241'}
-      ];
+        {name: 'HOODIE', sold: props.itemSales[0].hoodie, fill: '#f45241'},
+        {name: 'FITTED CAP', sold: props.itemSales[1].cap, fill: '#f4a742'},
+        {name: 'BRACELET', sold: props.itemSales[2].bracelet, fill: '#41dcf4'}   
+    ];
       
     const style = {
-        left: 250,
+        left: 270,
+        top:120,
         lineHeight: '24px'
     };
     return (
-        <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={30} outerRadius={100} barGap={0} barSize={20} data={data} startAngle={90} endAngle={-270}>
+        <RadialBarChart width={400} height={400} cx={150} cy={150} innerRadius={30} outerRadius={120} barGap={0} barSize={30} data={data} startAngle={90} endAngle={-270}>
             <RadialBar  minAngle={15} background clockWise={true} dataKey='sold'/>
             <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style}/>
         </RadialBarChart>

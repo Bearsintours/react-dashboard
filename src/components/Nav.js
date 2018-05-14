@@ -1,18 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import '../styles/components/Nav.scss';
 
 const Nav = () => (
-    <div>
-        <ul>
-            <li>
-                <NavLink to="/day" activeClassName="is-active">Day</NavLink>
-            </li>
-            <li>
-                <NavLink to="/" activeClassName="is-active">Week</NavLink>
-            </li>
-            <li>
-                <NavLink to="/month" activeClassName="is-active">Month</NavLink>
-            </li>
+    <div className="nav">
+        <ul className="nav__btns">      
+            <NavLink 
+                className="nav__link" 
+                to="/day" 
+                activeClassName="is-active">
+                Day
+            </NavLink>     
+            <NavLink 
+                className="nav__link" 
+                to="/week" activeClassName="is-active">
+                Week
+            </NavLink>   
+            <NavLink 
+                className="nav__link" 
+                to="/month" 
+                activeClassName="is-active">
+                Month
+            </NavLink>   
         </ul>
     </div>
 )

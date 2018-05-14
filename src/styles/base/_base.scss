@@ -3,12 +3,13 @@ html {
 }
 
 body {
-  
+  background: linear-gradient($purple, rgba(135, 44, 135, 0.9), $purple);
+  color: $white;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
 }
 
 .component {
-  box-sizing: border-box;
   max-width: 100%;
+  text-align: center;
 }

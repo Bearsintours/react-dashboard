@@ -18,6 +18,7 @@ const Week = (props) => {
                 totalSales={props.totalSales}
                 sales={props.sales}
                 itemSales={props.itemSales}
+                orders={props.orders}
             />
             <Items />
         </div>
@@ -26,7 +27,7 @@ const Week = (props) => {
 const mapStateToProps = (state) => {
     return {
         orders: state.orders,
-        ordersCompleted: state.completed,
+        ordersCompleted: state.ordersCompleted,
         totalSales: state.totalSales,
         sales: state.sales,
         itemSales: state.itemSales

@@ -6,7 +6,6 @@ import Day from '../components/Day';
 import Week from '../components/Week';
 import Month from '../components/Month';
 
-
 const AppRouter = () => (
   <BrowserRouter>
     <div>
@@ -14,6 +13,7 @@ const AppRouter = () => (
       <Nav />
       <Switch>
         <Route exact path="/" component={Week}/>
+        <Route path="/week" component={Week} />
         <Route path="/day" component={Day} />
         <Route path="/month" component={Month} />
       </Switch>

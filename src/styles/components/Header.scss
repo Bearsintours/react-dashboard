@@ -1,13 +1,10 @@
-.header {
-    max-width: 100%;
-}
+@import '../styles.scss';
 
-.icon-bar {
-    background: black;
-    border-radius: 30%;
-    margin-top: 5px;
-    height: 5px;
-    width: 30px;
+.header {
+    color: $white;
+    font-size: $xl-size;
+    letter-spacing: 1px;
+    max-width: 100%;
 }
 
 .header ul {
@@ -19,10 +16,19 @@ li {
 }
 
 .nav__title {
+    font-weight: 200;
     margin-left: auto;
-    margin-right: auto    
+    margin-right: auto;
+    padding-top: 3px;
+    text-transform: uppercase;  
 }
 
 .nav__search {
     margin-right: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        font-size: $l-size;
+    }
 }

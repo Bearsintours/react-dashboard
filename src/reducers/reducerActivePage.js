@@ -13,7 +13,7 @@ const reducerDefaultState = {
     itemSales: data.week.sales
 };
 
-const reducer = function (state = reducerDefaultState, action) {
+export const reducer = function (state = reducerDefaultState, action) {
   switch(action.type) {
     case 'DAY_PAGE':
         return {

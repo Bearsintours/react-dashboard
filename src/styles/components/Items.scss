@@ -1,0 +1,65 @@
+@import '../styles.scss';
+
+.items {
+    max-width: 100%;
+}
+
+.item {
+    color: $white;
+    display: inline-block;
+    font-size: $l-size;
+    font-weight: 100;
+    margin: 30px;
+}
+
+.item * {
+    display: inline-block;
+    padding: 10px;
+}
+
+.items__circle {
+    border-radius: 100%;
+    height: 5px;
+    margin: auto;
+    position: relative;
+    top: 6px;
+    width: 5px;
+}
+
+#circle0 {
+    background: $red;
+}
+
+#circle1 {
+    background: #f4a742;
+}
+
+#circle2 {
+    background: #41dcf4;
+}
+
+.item__price {
+    color: $red;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .items {
+        margin: auto;
+        width: 80%;
+    }
+    .item {
+        display: flex;
+        justify-content: space-between; 
+    }  
+    .item__name p {
+        margin-left: 20px;
+    }  
+}
+
+@media only screen and (max-width: 992px) {
+    .item {
+        font-size: $m-size;
+        margin: 25px;
+    }
+}

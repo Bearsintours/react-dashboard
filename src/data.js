@@ -44,18 +44,18 @@ const data = {
             {"bracelet": 201}
         ],
         "breakdown": [
-            {name: "05", hoodie: 10, hat: 6, bracelet: 4},
+            {name: "05", hoodie: 3, hat: 6, bracelet: 4},
             {name: "10", hoodie: 6, hat: 3, bracelet: 6},
             {name: "15", hoodie: 7, hat: 4, bracelet: 8},
             {name: "20", hoodie: 6, hat: 2, bracelet: 3},
             {name: "25", hoodie: 9, hat: 5, bracelet: 5},
-            {name: "31", hoodie: 13, hat: 4, bracelet: 8},
+            {name: "31", hoodie: 5, hat: 4, bracelet: 2},
         ]
     },
     "items": [
-        {"name": "hoodie", "price": 74},
-        { "name": "cap", "price": 69.50},
-        {"name": "bracelet", "price": 39.05}
+        {"name": "Hoodie", "price": 74},
+        { "name": "Fitted Cap", "price": 69.50},
+        {"name": "Bracelet", "price": 39.05}
     ]
 }
 

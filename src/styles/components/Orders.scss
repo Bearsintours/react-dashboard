@@ -1,0 +1,50 @@
+@import '../styles.scss';
+
+.orders {
+    margin-bottom: 100px;
+}
+
+.label {
+    display: inline-block;
+    color: $white;
+    font-size: $l-size;
+    font-weight: 100;
+    line-height: 30%;
+}
+
+.label--orders {
+    position: relative;
+    bottom: 43px;
+    right: 180px;
+}
+
+.label--completed {
+    position: relative;
+    bottom: 50px;
+    left: 220px;
+}
+
+.label__num {
+    color: $red;
+    font-weight: 500;
+    font-size: $l-size;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .orders {
+        margin-bottom: 50px;
+    }
+    .label {
+        display: inline-block;
+        font-size: $m-size;
+        line-height: 60%;
+        padding: 0 65px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .label__num {
+        font-size: $m-size;
+    }
+}

@@ -1,0 +1,31 @@
+@import '../styles.scss';
+
+.sales {
+    color: $white;
+    line-height: 70%;
+    margin-bottom: 100px;
+    h1 {
+    font-weight: 200;
+    font-size: $xl-size;
+    }
+    p {
+        color: $red;
+        font-size: $l-size;
+        font-weight: 500;
+    }
+}
+
+.sales__graphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: -50px;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .sales {
+        line-height: 50%;
+    }
+}
