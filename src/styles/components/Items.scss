@@ -9,7 +9,7 @@
     display: inline-block;
     font-size: $l-size;
     font-weight: 100;
-    margin: 30px;
+    margin: 0 30px;
 }
 
 .item * {
@@ -42,7 +42,6 @@
     color: $red;
 }
 
-
 @media only screen and (max-width: 768px) {
     .items {
         margin: auto;
@@ -50,11 +49,11 @@
     }
     .item {
         display: flex;
-        justify-content: space-between; 
-    }  
+        justify-content: space-between;
+    }
     .item__name p {
         margin-left: 20px;
-    }  
+    }
 }
 
 @media only screen and (max-width: 992px) {

@@ -11,3 +11,4 @@ export const weekPage = () => ({
  export const monthPage = () => ({
     type: 'MONTH_PAGE',
  })
+ 

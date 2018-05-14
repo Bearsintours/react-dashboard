@@ -1,36 +1,40 @@
 import React from 'react';
 import '../styles/components/Orders.scss';
 
-class Orders extends React.Component {    
-    render() {
-        const ratio = this.props.ordersCompleted / this.props.orders;
-        return (
-            <div className="orders">
-                <div className="gauge">
-                    <Gauge percent={ratio} animate={true}/>
-                </div>
-                <div className="label label--orders">
-                    <p>Orders</p>
-                    <p className="label__num">{this.props.orders}</p>
-                </div>
-                <div className="label label--completed">
-                    <p>Completed</p>
-                    <p className="label__num">{this.props.ordersCompleted}</p>
-                </div>
+const Orders = (props) => {    
+    const ratio = props.ordersCompleted / props.orders;
+    return (
+        <div className="orders">
+            <div className="gauge">
+                <Gauge percent={ratio} animate={true}/>
             </div>
-        )
-    }
+            <div className="label label--orders">
+                <p>Orders</p>
+                <p className="label__num">{props.orders}</p>
+            </div>
+            <div className="label label--completed">
+                <p>Completed</p>
+                <p className="label__num">{props.ordersCompleted}</p>
+            </div>
+        </div>
+    )
 }
+
 
 const Gauge = (props) => {
     let {
-        percent = 0,         // a number between 0 and 1, inclusive
-        width = 300,         // the overall width
-        height = 10,         // the overall height
-        rounded = true,      // if true, use rounded corners
-        color = "#f45241",   // the fill color
-        animate = false,     // if true, animate when the percent changes
-        label = null         // a label to describe the contents 
+        // a number between 0 and 1, inclusive
+        percent = 0,         
+        width = 300,         
+        height = 10, 
+        // if true, use rounded corners        
+        rounded = true, 
+        // the fill color     
+        color = "#f45241",  
+        // if true, animate when the percent changes 
+        animate = false,  
+        // a label to describe the contents   
+        label = null          
     } = props;
   
     const r = rounded ? Math.ceil(height / 2) : 0;
@@ -46,3 +50,4 @@ const Gauge = (props) => {
   };
 
   export default Orders;
+  

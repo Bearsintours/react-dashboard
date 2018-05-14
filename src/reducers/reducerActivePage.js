@@ -4,7 +4,7 @@ import { monthPage } from '../actions/changePage';
 import { createStore } from 'redux';
 import data from '../data';
 
-
+// Week dashboard by default
 const reducerDefaultState = {
     orders: data.week.orders,
     ordersCompleted: data.week.completed,

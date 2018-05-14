@@ -2,6 +2,7 @@
 
 By [Quentin Brogly](mailto:qbrogly@gmail.com)
 
+See project on Heroku : [https://bearsintours-react-dashboard.herokuapp.com](https://bearsintours-react-dashboard.herokuapp.com)
 
 ## Instructions
 
@@ -22,8 +23,7 @@ The app uses Webpack as modules bundler.
 
 ## Requirements
 
-#### Create a mobile responsive page based on design provided. 
-#### Please use React and Redux
+#### Create a mobile responsive page based on design provided. Please use React and Redux
 
 The dashboard page is built with React and fully responsive.
 I used React-router to set the routes to the daily, weekly or monthly dashboard page.
@@ -32,7 +32,7 @@ Each page is connected to the Redux store and the reducer specifies what data to
 
 #### Write a simple unit test using Mocha
 
-I wrote a simple unit test using Mocha that runs test for each action type and make sure the initial state display weekly data.
+I wrote a simple unit test using Mocha that runs tests for each action type and make sure the initial state display weekly data.
 
 
 #### Make your code available on Github or Bitbucket

@@ -24,6 +24,7 @@ const Week = (props) => {
         </div>
     )
 }
+
 const mapStateToProps = (state) => {
     return {
         orders: state.orders,

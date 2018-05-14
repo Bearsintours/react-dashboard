@@ -5,8 +5,8 @@
     line-height: 70%;
     margin-bottom: 100px;
     h1 {
-    font-weight: 200;
-    font-size: $xl-size;
+        font-weight: 200;
+        font-size: $xl-size;
     }
     p {
         color: $red;
@@ -23,7 +23,6 @@
     margin-top: -20px;
     width: 100%;
 }
-
 
 @media only screen and (max-width: 768px) {
     .sales {

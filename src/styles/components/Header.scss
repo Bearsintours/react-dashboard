@@ -1,5 +1,4 @@
 @import '../styles.scss';
-
 .header {
     color: $white;
     font-size: $xl-size;
@@ -8,7 +7,7 @@
 }
 
 .header ul {
-    display: flex; 
+    display: flex;
 }
 
 li {
@@ -20,7 +19,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     padding-top: 3px;
-    text-transform: uppercase;  
+    text-transform: uppercase;
 }
 
 .nav__search {
