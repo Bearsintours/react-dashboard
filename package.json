@@ -5,9 +5,12 @@
   "author": "Quentin",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha --compilers js:babel-register",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -17,8 +20,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
-    "express": "^4.16.3",
-    "mocha": "^5.1.1",
+    "express": "^4.16.3", 
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
     "react": "16.0.0",
@@ -30,7 +32,10 @@
     "redux": "^4.0.0",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
-    "webpack": "3.1.0",
+    "webpack": "3.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1",
     "webpack-dev-server": "2.5.1"
   }
 }

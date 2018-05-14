@@ -9,6 +9,8 @@ import { monthPage } from './actions/changePage';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
+console.log('test');
+
 const app = (
   <Provider store={store}>
     <AppRouter />
