@@ -12,8 +12,9 @@ const Nav = () => (
                 Day
             </NavLink>     
             <NavLink 
+                exact
                 className="nav__link" 
-                to="/week" activeClassName="is-active">
+                to="/" activeClassName="is-active">
                 Week
             </NavLink>   
             <NavLink 
