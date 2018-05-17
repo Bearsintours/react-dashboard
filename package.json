@@ -8,7 +8,7 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "mocha --compilers js:babel-register",
+    "test": "mocha --compilers js:babel-register --require ignore-styles",
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
@@ -20,7 +20,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
-    "express": "^4.16.3", 
+    "express": "^4.16.3",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
     "react": "16.0.0",
@@ -35,6 +35,10 @@
     "webpack": "3.1.0"
   },
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "expect.js": "^0.3.1",
+    "ignore-styles": "^5.0.1",
     "mocha": "^5.1.1",
     "webpack-dev-server": "2.5.1"
   }
